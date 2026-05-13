@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html class="light" lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>Art-Vida Capoeira - Conchal-SP</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Inter:wght@400;600&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+  <!-- Tailwind Config -->
+  <script src="tailwind.config.js"></script>
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+
+
+
+<body class="bg-background text-on-surface selection:bg-secondary-container selection:text-on-secondary-container berimbau-texture min-h-screen">
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <!-- Inicialização -->
+<script>
+  AOS.init({
+    duration: 800,
+    once: true
+  });
+</script>
+  <!-- ===== TOP APP BAR ===== -->
+  <header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-primary/10 shadow-sm">
+    <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-unit max-w-container-max mx-auto h-16">
+      <div class="flex items-center gap-4">
+        <button class="p-2 hover:bg-surface-container rounded-full transition-colors" id="menu-btn" aria-label="Abrir menu">
+          <span class="material-symbols-outlined text-primary">menu</span>
+        </button>
+        <h1 class="font-headline-lg text-headline-lg font-bold tracking-tight text-primary">Art-Vida</h1>
+      </div>
+
+      <nav class="hidden md:flex gap-gutter items-center">
+        <a class="font-label-sm text-label-sm text-primary border-b-2 border-primary py-1" href="#">Home</a>
+        <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors py-1" href="#historia">Mestre Vagner</a>
+        <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors py-1" href="#classes">Classes</a>
+        <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors py-1" href="#contato">Contato</a>
+      </nav>
+
+      <button class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-label-sm text-label-sm hover:opacity-90 active:scale-95 transition-all shadow-md" id="participar-btn">
+        Participar
+      </button>
+    </div>
+
+    <!-- Mobile Menu (hidden by default) -->
+    <nav id="mobile-menu" class="hidden md:hidden bg-surface border-t border-primary/10 px-margin-mobile py-4 flex flex-col gap-4">
+      <a class="font-label-sm text-label-sm text-primary" href="#">Home</a>
+      <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#historia">Mestre Vagner</a>
+      <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#classes">Classes</a>
+      <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main class="pt-16">
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="relative overflow-hidden py-16 md:py-24">
+      <div class="absolute -top-24 -right-24 w-96 h-96 bg-primary/5 fluid-shape -z-10 animate-pulse"></div>
+      <div class="absolute top-1/2 -left-20 w-64 h-64 bg-secondary-container/10 fluid-shape -z-10"></div>
+
+      <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 items-center gap-gutter">
+        <div class="flex flex-col gap-6 text-center md:text-left">
+          <span class="inline-block bg-primary-container/10 text-primary-container px-4 py-1 rounded-full font-label-sm text-label-sm w-fit mx-auto md:mx-0">
+            Fundada em 1994
+          </span>
+          <h2 class="font-display-lg text-display-lg text-primary">Tradição e Arte em Conchal-SP</h2>
+          <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto voluptate ullam labore fugit similique reiciendis explicabo accusantium quisquam, dolore tenetur impedit beatae eum dolorem debitis quae nam fugiat nisi asperiores.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 mt-4 justify-center md:justify-start">
+            <button class="bg-secondary-container text-on-secondary-container px-8 py-4 rounded-xl font-headline-md text-body-md font-bold shadow-lg hover:shadow-xl hover:translate-y-[-2px] transition-all" id="aula-btn">
+              Venha conhecer nossa historia
+            </button>
+          </div>
+        </div>
+
+        <div class="flex justify-center items-center relative p-8">
+          <div class="absolute inset-0 bg-secondary/5 rounded-full blur-3xl"></div>
+          <img
+            alt="Art-Vida Capoeira Logo"
+            class="relative z-10 w-full max-w-md drop-shadow-2xl logoCapoeira"
+            src="./img/logoCapoeira.png"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== HISTORY SECTION ===== -->
+    <section class="bg-surface-container-low py-20 relative" id="historia">
+      <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+
+          <div data-aos="fade-right" class="md:col-span-5 relative group">
+            <div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl relative">
+              <img
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                alt="Mestre Vagner com Berimbau na academia Art-Vida"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-y3QzjAvr0bKi9a-g0g5A1sYXzuQg9Ba5KYXI9Yw_7FEw6BOW6qhGdJdWWHO671P_zC0ZfPmj3e3wDFmsb3BOB8h-4kANIOVCindFXH6ffu91FNjc9R71p2OFh-g9XzGFG-9kibCodFQ5Cc5_jHEa3wCoYv74n1v8NyP2l2ib2Vcgt__bkIeGmejWdnZAQUe7HR-XYNtEosiVXpS9UZ1V14D4ccSWTg0nnQsX37Y5_Qix5IjObTKW3Q79HjbqmrBoHiq63uOKeQ"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent"></div>
+              <div class="absolute bottom-6 left-6 text-on-primary">
+                <p class="font-headline-md text-headline-md">arte ilustrativa</p>
+                <p class="font-label-sm text-label-sm opacity-80">Art-Vida</p>
+              </div>
+            </div>
+            <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-secondary-fixed border-8 border-surface-container-low rounded-2xl flex items-center justify-center shadow-lg">
+              <p class="font-display-lg text-display-lg text-on-secondary-fixed text-center leading-none">30<br/><span class="text-body-md">Anos</span></p>
+            </div>
+          </div>
+
+          <div class="md:col-span-7 flex flex-col justify-center gap-6">
+            <div class="w-16 h-1.5 bg-secondary-container rounded-full"></div>
+            <h3 class="font-headline-lg text-headline-lg text-primary">Nossa História &amp; Legado</h3>
+            <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+              A <span class="font-bold text-primary">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</span>  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas quis vero autem exercitationem dolores deleniti illum fugit facilis eos deserunt. Dignissimos laboriosam nobis eos pariatur aliquam id deleniti et iure.
+            </p>
+            <p class="font-body-md text-body-md text-on-surface-variant">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque impedit aut deleniti earum eos vero consequatur nihil perferendis at libero saepe, quisquam quasi officiis aliquam alias, nisi odit laboriosam ab.
+            </p>
+            <div class="flex gap-8 mt-4">
+              <div class="flex flex-col">
+                <span class="font-display-lg text-headline-lg text-primary">1994</span>
+                <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Fundação</span>
+              </div>
+              <div class="w-px h-12 bg-outline-variant"></div>
+              <div class="flex flex-col">
+                <span class="font-display-lg text-headline-lg text-primary">Conchal</span>
+                <span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Cidade</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CLASSES SECTION ===== -->
+    <section class="py-24" id="classes">
+      <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+        <div class="text-center mb-16">
+          <h3 class="font-headline-lg text-headline-lg text-primary mb-4">Treine Conosco</h3>
+          <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+            Temos turmas adaptadas para todos os níveis e idades, focando no desenvolvimento integral de cada aluno.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+
+          <!-- Turmas Adultas -->
+          <div data-aos="fade-up" class="bg-surface rounded-2xl p-8 border-l-4 border-primary shadow-lg hover:shadow-xl transition-all group">
+            <div class="w-14 h-14 bg-primary-container/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-primary-container/20 transition-colors">
+              <span class="material-symbols-outlined text-primary text-3xl">sports_kabaddi</span>
+            </div>
+            <h4 class="font-headline-md text-headline-md text-primary mb-3">Turmas Adultas</h4>
+            <p class="font-body-md text-body-md text-on-surface-variant mb-6">
+              Foco em técnica, condicionamento físico, acrobacias e musicalidade. Perfeito para quem busca saúde e cultura.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-tertiary/10 text-tertiary rounded-full font-label-sm text-label-sm">Iniciante</span>
+              <span class="px-3 py-1 bg-tertiary/10 text-tertiary rounded-full font-label-sm text-label-sm">Avançado</span>
+            </div>
+          </div>
+
+          <!-- Capoeira Kids -->
+          <div data-aos="fade-up" class="bg-surface rounded-2xl p-8 border-l-4 border-secondary shadow-lg hover:shadow-xl transition-all group">
+            <div class="w-14 h-14 bg-secondary-container/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-secondary-container/20 transition-colors">
+              <span class="material-symbols-outlined text-secondary text-3xl">child_care</span>
+            </div>
+            <h4 class="font-headline-md text-headline-md text-secondary mb-3">Capoeira Kids</h4>
+            <p class="font-body-md text-body-md text-on-surface-variant mb-6">
+              Desenvolvimento motor, disciplina e socialização através de brincadeiras e fundamentos da capoeira.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-tertiary/10 text-tertiary rounded-full font-label-sm text-label-sm">Psicomotricidade</span>
+              <span class="px-3 py-1 bg-tertiary/10 text-tertiary rounded-full font-label-sm text-label-sm">Musicalidade</span>
+            </div>
+          </div>
+
+          <!-- Projetos Sociais -->
+          <div data-aos="fade-up" class="bg-surface rounded-2xl p-8 border-l-4 border-tertiary shadow-lg hover:shadow-xl transition-all group">
+            <div class="w-14 h-14 bg-tertiary-container/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-tertiary-container/20 transition-colors">
+              <span class="material-symbols-outlined text-tertiary text-3xl">groups</span>
+            </div>
+            <h4 class="font-headline-md text-headline-md text-tertiary mb-3">Projetos Sociais</h4>
+            <p class="font-body-md text-body-md text-on-surface-variant mb-6">
+              Ações voltadas para a inclusão social e fortalecimento da cidadania através da arte capoeirística.
+            </p>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-tertiary/10 text-tertiary rounded-full font-label-sm text-label-sm">Gratuito</span>
+              <span class="px-3 py-1 bg-tertiary/10 text-tertiary rounded-full font-label-sm text-label-sm">Comunitário</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== LEADERSHIP SECTION ===== -->
+    <section class="py-24 bg-primary text-on-primary relative overflow-hidden">
+      <div class="absolute inset-0 berimbau-texture opacity-10"></div>
+      <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+        <div class="text-center mb-16">
+          <h3 class="font-headline-lg text-headline-lg mb-4">Liderança e Supervisão</h3>
+          <div class="w-24 h-1 bg-secondary-container mx-auto rounded-full"></div>
+        </div>
+
+        <div data-aos="fade-up" class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-4xl mx-auto">
+          <div class="flex items-center gap-6 p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
+            <div class="w-20 h-20 rounded-full bg-secondary-container flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-on-secondary-container text-4xl">person</span>
+            </div>
+            <div>
+              <p class="font-headline-md text-headline-md">Professor Mineiro</p>
+              <p class="font-body-md text-body-md opacity-80">Responsável Técnico Conchal-SP</p>
+            </div>
+          </div>
+
+          <div data-aos="fade-up" class="flex items-center gap-6 p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10">
+            <div class="w-20 h-20 rounded-full bg-secondary-container flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-on-secondary-container text-4xl">military_tech</span>
+            </div>
+            <div>
+              <p class="font-headline-md text-headline-md">Mestre Juninho</p>
+              <p class="font-body-md text-body-md opacity-80">Supervisão Geral</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-stack-lg bg-surface sectionCarrossel">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-stack-md gap-4">
+          <div class="max-w-2xl p-3">
+            <span class="text-secondary font-label-bold uppercase tracking-widest mb-4 block">Vivência</span>
+            <h2 class="text-primary font-headline-lg text-headline-md">Nossas Aulas</h2>
+            <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Sinta a vibração da nossa roda. Treinos dinâmicos que integram música, técnica e comunidade.</p>
+          </div>
+          <div class="flex gap-2 p-5">
+            <button class="w-12 h-12 rounded-full border-2 border-primary text-primary flex items-center justify-center hover:bg-primary hover:text-white transition-colors" onclick="document.getElementById('aulas-carousel').scrollBy({left: -300, behavior: 'smooth'})">
+              <span class="material-symbols-outlined" data-icon="chevron_left">chevron_left</span>
+            </button>
+            <button class="w-12 h-12 rounded-full border-2 border-primary text-primary flex items-center justify-center hover:bg-primary hover:text-white transition-colors" onclick="document.getElementById('aulas-carousel').scrollBy({left: 300, behavior: 'smooth'})">
+              <span class="material-symbols-outlined" data-icon="chevron_right">chevron_right</span>
+            </button>
+          </div>
+        </div>
+        <div class="flex overflow-x-auto gap-6 snap-x no-scrollbar pb-4" id="aulas-carousel">
+
+        <div class="min-w-[80vw] md:min-w-[450px] snap-start relative group overflow-hidden rounded-2xl">
+          <img class="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A dynamic action shot of two capoeira students engaged in a 'jogo' (game) inside a studio with wooden floors. The students are wearing white 'abadas' and are in mid-movement, showcasing balance and grace." src="./img/treino.png"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+          <div class="absolute bottom-6 left-6 text-white">
+            <p class="font-headline-md text-body-lg font-bold">Treino de Fundamentos</p>
+            <p class="text-sm opacity-90">Técnica e precisão na Ginga</p>
+          </div>
+        </div>
+        <div class="min-w-[80vw] md:min-w-[450px] snap-start relative group overflow-hidden rounded-2xl">
+          <img class="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A wide shot of a capoeira roda in a sunlit outdoor park. A large circle of people is clapping and singing while two capoeiristas play in the center. The energy is vibrant and communal." src="./img/rodaDeCapoeira.png"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+          <div class="absolute bottom-6 left-6 text-white">
+            <p class="font-headline-md text-body-lg font-bold">A Roda Semanal</p>
+            <p class="text-sm opacity-90">Onde a energia se manifesta</p>
+          </div>
+        </div>
+        <div class="min-w-[80vw] md:min-w-[450px] snap-start relative group overflow-hidden rounded-2xl">
+          <img class="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Close up of a student learning to play the Pandeiro, a Brazilian tambourine, during a capoeira class focused on music. The teacher's hands are visible guiding the student's rhythm." src="./img/musicalidade.jpg"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+          <div class="absolute bottom-6 left-6 text-white">
+            <p class="font-headline-md text-body-lg font-bold">Musicalidade</p>
+            <p class="text-sm opacity-90">Aprendendo os ritmos e cantos</p>
+          </div>
+        </div>
+        <div class="min-w-[80vw] md:min-w-[450px] snap-start relative group overflow-hidden rounded-2xl">
+          <img class="w-full h-[500px] object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A group of smiling kids in white capoeira uniforms sitting in a circle on a colorful mat, listening to their instructor. The setting is bright and child-friendly." src="./img/aulasParaCriancas.png"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-60 group-hover:opacity-80 transition-opacity"></div>
+          <div class="absolute bottom-6 left-6 text-white">
+            <p class="font-headline-md text-body-lg font-bold">Futuros Mestres</p>
+            <p class="text-sm opacity-90">Aulas lúdicas para crianças</p>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT / MAP SECTION ===== -->
+    <section class="py-24" id="contato">
+      <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+
+          <div class="flex flex-col gap-6">
+            <h3 class="font-headline-lg text-headline-lg text-primary">Nossa Casa em Conchal-SP</h3>
+            <p class="font-body-lg text-body-lg text-on-surface-variant">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint esse nisi delectus sed laudantium facere quam consequuntur! Non corporis accusamus exercitationem. Libero labore vitae quasi ad corporis beatae fugiat nesciunt?
+            </p>
+            <div class="space-y-4">
+              <div class="flex items-start gap-4">
+                <span class="material-symbols-outlined text-primary mt-1">location_on</span>
+                <div>
+                  <p class="font-label-sm text-label-sm text-primary uppercase">Endereço</p>
+                  <p class="font-body-md text-body-md text-on-surface-variant">Rua Principal, Centro, Conchal-SP, Brasil</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <span class="material-symbols-outlined text-primary mt-1">schedule</span>
+                <div>
+                  <p class="font-label-sm text-label-sm text-primary uppercase">Horários</p>
+                  <p class="font-body-md text-body-md text-on-surface-variant">Segunda a Sexta: 18h - 21h<br/>Sábados (Roda): 10h - 12h</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-3xl overflow-hidden shadow-2xl h-[400px] bg-surface-container relative">
+            <iframe
+              class="absolute inset-0 w-full h-full"
+              src="https://www.google.com/maps?q=Av.+União,+1531,+Esperança+II,+Conchal,+SP,+13835-000,+Brasil&output=embed"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+            <div class="absolute bottom-4 left-0 right-0 flex justify-center" style="z-index: 9999; pointer-events: none;">
+                Abrir no Google Maps
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="bg-surface-container-highest border-t border-primary/5 py-16">
+    <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter mb-12">
+
+        <div class="col-span-1 md:col-span-2">
+          <h2 class="font-headline-md text-headline-md text-primary mb-4">Art-Vida Capoeira</h2>
+          <p class="font-body-md text-body-md text-on-surface-variant max-w-sm mb-6">
+            Preservando a cultura brasileira e transformando vidas através da Ginga desde 1994 em Conchal-SP.
+          </p>
+          <div class="flex gap-4">
+            <a class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center hover:bg-primary-container transition-colors" href="#" aria-label="Facebook">
+              <span class="material-symbols-outlined text-xl">Notebook</span>
+            </a>
+            <a class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center hover:bg-primary-container transition-colors" href="#" aria-label="Instagram">
+              <span class="material-symbols-outlined text-xl">photo_camera</span>
+            </a>
+            <a class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center hover:bg-primary-container transition-colors" href="#" aria-label="WhatsApp">
+              <span class="material-symbols-outlined text-xl">chat</span>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-label-sm text-label-sm text-primary uppercase mb-6">Navegação</h4>
+          <ul class="space-y-3">
+            <li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Início</a></li>
+            <li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#historia">História</a></li>
+            <li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#classes">Classes</a></li>
+            <li><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#contato">Localização</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-label-sm text-label-sm text-primary uppercase mb-6">Contato</h4>
+          <ul class="space-y-3">
+            <li class="font-body-md text-body-md text-on-surface-variant flex gap-2">
+              <span class="material-symbols-outlined text-primary text-sm">phone</span>
+              (19) 99999-9999
+            </li>
+            <li class="font-body-md text-body-md text-on-surface-variant flex gap-2">
+              <span class="material-symbols-outlined text-primary text-sm">mail</span>
+              contato@artvidacapoeira.com
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-outline-variant/30 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+        <p class="font-label-sm text-label-sm text-on-surface-variant">
+          © 2024 Art-Vida Capoeira Conchal-SP. Fundada 1994. Supervisão Mestre Juninho.
+        </p>
+        <div class="flex gap-6">
+          <a class="font-label-sm text-label-sm text-on-surface-variant hover:underline" href="#">Políticas</a>
+          <a class="font-label-sm text-label-sm text-on-surface-variant hover:underline" href="#">Termos</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+  
+
+</body>
+</html>
