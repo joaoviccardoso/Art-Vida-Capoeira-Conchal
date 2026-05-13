@@ -19,6 +19,7 @@
 
   <!-- FAVICON (opcional mas recomendado) -->
   <link rel="icon" href="./img/logoCapoeira.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
@@ -67,31 +68,16 @@
   <header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-primary/10 shadow-sm">
     <div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-unit max-w-container-max mx-auto h-16">
       <div class="flex items-center gap-4">
-        <button class="p-2 hover:bg-surface-container rounded-full transition-colors" id="menu-btn" aria-label="Abrir menu">
-          <span class="material-symbols-outlined text-primary">menu</span>
-        </button>
-        <h1 class="font-headline-lg text-headline-lg font-bold tracking-tight text-primary">Art-Vida</h1>
+        <h1 class="font-headline-md text-headline-md font-bold tracking-tight text-primary tituloDaPagina">Art-Vida</h1>
       </div>
 
-      <nav class="hidden md:flex gap-gutter items-center">
-        <a class="font-label-sm text-label-sm text-primary border-b-2 border-primary py-1" href="#">Home</a>
-        <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors py-1" href="#historia">Mestre Vagner</a>
-        <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors py-1" href="#classes">Classes</a>
-        <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors py-1" href="#contato">Contato</a>
+      <nav class="md:flex gap-gutter items-center navMenu">
+        <a class="font-label-sm  text-primary border-primary py-1" href="#">Home</a>
+        <a class="font-label-sm  text-on-surface-variant hover:text-primary transition-colors py-1" href="#historia">Mestre</a>
+        <a class="font-label-sm  text-on-surface-variant hover:text-primary transition-colors py-1" href="#classes">Classes</a>
+        <a class="font-label-sm  text-on-surface-variant hover:text-primary transition-colors py-1" href="#contato">Contato</a>
       </nav>
-
-      <button class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-label-sm text-label-sm hover:opacity-90 active:scale-95 transition-all shadow-md" id="participar-btn">
-        Participar
-      </button>
     </div>
-
-    <!-- Mobile Menu (hidden by default) -->
-    <nav id="mobile-menu" class="hidden md:hidden bg-surface border-t border-primary/10 px-margin-mobile py-4 flex flex-col gap-4">
-      <a class="font-label-sm text-label-sm text-primary" href="#">Home</a>
-      <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#historia">Mestre Vagner</a>
-      <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#classes">Classes</a>
-      <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="#contato">Contato</a>
-    </nav>
   </header>
 
   <main class="pt-16">
@@ -103,7 +89,7 @@
 
       <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 items-center gap-gutter">
         <div class="flex flex-col gap-6 text-center md:text-left">
-          <span class="inline-block bg-primary-container/10 text-primary-container px-4 py-1 rounded-full font-label-sm text-label-sm w-fit mx-auto md:mx-0">
+          <span class="inline-block bg-primary-container/10 text-primary-container px-4 py-1 rounded-full font-label-sm  w-fit mx-auto md:mx-0">
             Fundada em 1994
           </span>
           <h2 class="font-display-lg text-display-lg text-primary">Tradição e Arte em Conchal-SP</h2>
@@ -146,7 +132,7 @@
                 <p class="font-label-sm text-label-sm opacity-80">Art-Vida</p>
               </div>
             </div>
-            <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-secondary-fixed border-8 border-surface-container-low rounded-2xl flex items-center justify-center shadow-lg">
+            <div class="absolute -bottom-6 -right-3 w-32 h-32 bg-secondary-fixed border-8 border-surface-container-low rounded-2xl flex items-center justify-center shadow-lg">
               <p class="font-display-lg text-display-lg text-on-secondary-fixed text-center leading-none">30<br/><span class="text-body-md">Anos</span></p>
             </div>
           </div>
@@ -271,15 +257,16 @@
       </div>
     </section>
 
+    <!-- ===== Carrossel ===== -->
     <section class="py-stack-lg bg-surface sectionCarrossel">
       <div class="container mx-auto px-6">
         <div class="flex flex-col md:flex-row justify-between items-end mb-stack-md gap-4">
-          <div class="max-w-2xl p-3">
+          <div class="max-w-2xl p-2">
             <span class="text-secondary font-label-bold uppercase tracking-widest mb-4 block">Vivência</span>
             <h2 class="text-primary font-headline-lg text-headline-md">Nossas Aulas</h2>
             <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Sinta a vibração da nossa roda. Treinos dinâmicos que integram música, técnica e comunidade.</p>
           </div>
-          <div class="flex gap-2 p-5">
+          <div class="flex gap-3 p-4">
             <button class="w-12 h-12 rounded-full border-2 border-primary text-primary flex items-center justify-center hover:bg-primary hover:text-white transition-colors" onclick="document.getElementById('aulas-carousel').scrollBy({left: -300, behavior: 'smooth'})">
               <span class="material-symbols-outlined" data-icon="chevron_left">chevron_left</span>
             </button>
@@ -327,7 +314,7 @@
     </section>
 
     <!-- ===== CONTACT / MAP SECTION ===== -->
-    <section class="py-24" id="contato">
+    <section class="py-14" id="contato">
       <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
 
@@ -376,7 +363,7 @@
   </main>
 
   <!-- ===== FOOTER ===== -->
-  <footer class="bg-surface-container-highest border-t border-primary/5 py-16">
+  <footer class="bg-surface-container-highest border-t border-primary/5 py-16 mt-18">
     <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
       <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter mb-12">
 
@@ -386,14 +373,13 @@
             Preservando a cultura brasileira e transformando vidas através da Ginga desde 1994 em Conchal-SP.
           </p>
           <div class="flex gap-4">
-            <a class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center hover:bg-primary-container transition-colors" href="#" aria-label="Facebook">
-              <span class="material-symbols-outlined text-xl">Notebook</span>
+            <a href="#" aria-label="Facebook"
+              class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center hover:bg-primary-container transition-colors">
+              <i class="fab fa-facebook-f"></i>
             </a>
-            <a class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center hover:bg-primary-container transition-colors" href="#" aria-label="Instagram">
-              <span class="material-symbols-outlined text-xl">photo_camera</span>
-            </a>
-            <a class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center hover:bg-primary-container transition-colors" href="#" aria-label="WhatsApp">
-              <span class="material-symbols-outlined text-xl">chat</span>
+            <a href="#" aria-label="Instagram"
+              class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center hover:bg-primary-container transition-colors">
+              <i class="fab fa-instagram"></i>
             </a>
           </div>
         </div>
@@ -426,7 +412,7 @@
 
       <div class="pt-8 border-t border-outline-variant/30 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
         <p class="font-label-sm text-label-sm text-on-surface-variant">
-          © 2024 Art-Vida Capoeira Conchal-SP. Fundada 1994. Supervisão Mestre Juninho.
+          © 2026 Art-Vida Capoeira Conchal-SP. Fundada 1994. Supervisão Mestre Juninho.
         </p>
         <div class="flex gap-6">
           <a class="font-label-sm text-label-sm text-on-surface-variant hover:underline" href="#">Políticas</a>

@@ -54,13 +54,36 @@ header.scrolled {
 }
 
 /* ---------- Mobile menu (toggle via JS) ---------- */
-#mobile-menu {
-  transition: max-height 0.3s ease, opacity 0.3s ease;
+@media(max-width: 800px){
+  .tituloDaPagina{
+    font-size: 20px;
+  }
+
+  .navMenu{
+    display: flex;
+    gap: .8rem;
+  }
+
+  .navMenu a{
+    font-size: 12px;
+  }
 }
 
-#mobile-menu.open {
-  display: flex;
+@media(max-width: 340px){
+  .tituloDaPagina{
+    font-size: 20px;
+  }
+
+  .navMenu{
+    display: flex;
+    gap: .8rem;
+  }
+
+  .navMenu a{
+    font-size: 10px;
+  }
 }
+
 
 /* ---------- Hero: formas decorativas animadas ---------- */
 @keyframes float {
